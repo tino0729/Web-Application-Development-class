@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Setter</title>
+    <!-- Can change the family parameter to 1-8 to switch styles. -->
+    <!-- https://www.w3.org/StyleSheets/Core/preview -->
+    <link
+      rel="stylesheet"
+      href="https://www.w3.org/StyleSheets/Core/parser.css?doc=XML&family=8"
+    />
+    <script src="js_color_setter.js"></script>
+    <style>
+      #colorDiv {
+        width: 200px;
+        height: 200px;
+        margin: 20px;
+        border: 2px solid #fff;
+        background-color: #000;
+        outline: 2px solid #000;
+      }
+      label {
+        display: inline-block;
+        width: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Color Setter</h1>
+    <div>
+      <div>
+        <label for="redInput">Red:</label>
+        <input
+          type="number"
+          id="redInput"
+          min="0"
+          max="255"
+          value="0"
+          oninput="updateColor()"
+        />
+      </div>
+
+      <div>
+        <label for="greenInput">Green:</label>
+        <input
+          type="number"
+          id="greenInput"
+          min="0"
+          max="255"
+          value="0"
+          oninput="updateColor()"
+        />
+      </div>
+
+      <div>
+        <label for="blueInput">Blue:</label>
+        <input
+          type="number"
+          id="blueInput"
+          min="0"
+          max="255"
+          value="0"
+          oninput="updateColor()"
+        />
+      </div>
+    </div>
+
+    <div id="colorDiv"></div>
+  </body>
+</html>
